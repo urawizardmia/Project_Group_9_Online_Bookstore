@@ -1,3 +1,68 @@
+.landingPage {
+  background-image: 
+    url("/faeTombs.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15vh;
+  color: #c4aa95;
+}
+
+.landingPage h1 {
+  font-family: "Apple Chancery", cursive;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: #786e61;
+}
+
+.landingPage p {
+  font-family: "Snell Roundhand", cursive;
+  font-size: 24px;
+  padding-top: 5vh;
+}
+
+.landingPage button {
+  margin-top: 1rem;
+}
+
+.bookShelf {
+  --shelf-height: 260px;
+  --plank: 75px;
+
+  background-image: url("/bookshelf.png");
+  background-repeat: repeat-y;
+  background-size: 100% var(--shelf-height);
+  padding: 0 9%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: var(--shelf-height);
+  column-gap: 10px;
+  align-items: end;
+}
+
+.bookCard {
+
+  margin-bottom: var(--plank);
+  display: flex;
+  justify-content: center;
+
+}
+
+.bookCard img {
+  height: calc(var(--shelf-height) - var(--plank) - 40px);
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.bookCard img:hover {
+  transform: translateY(-10px);
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
